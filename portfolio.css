@@ -138,9 +138,23 @@ body {
     width: 80%;
     height: 80%;
 }
+#card_icon {
+    width: 80%;
+    height: auto;
+}
+#card_icon img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
 #card_title{
     font-size: large;
+    font-weight: 500;
+    margin: 10px 0;
 }
 #card_link {
     font-size: small;
+    font-weight: 500;
+    font-stretch: expanded;
 }
