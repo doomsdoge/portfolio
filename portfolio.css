@@ -1,38 +1,82 @@
+/* 
+------
+Body
+--------
+*/
+
 body {
-    font-family: Ubuntu,"Open Sans",sans-serif ;
+    font-family: "Ubuntu-Regular",Ubuntu,"Open Sans",sans-serif ;
     margin: 0;
     padding: 0;
     background-color: rgb(242,242,242);
 }
-@media screen and (min-width: 768px) {
-    #sec1 {
+
+/* 
+------
+Media Query : Tablet
+--------
+*/
+
+@media screen and (max-width: 1135px) {
+    #sec2 {
+        margin: 0 0 40px;
         width: 100%;
-        height: 200px;
+        height: 1400px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+    #sec2 #container {
+        width: 90%;
+        height: 1280px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: space-between;
+    }
+    #sec2 #main_card {
+        min-width: 100%;
+        min-height: 440px;
+        background-color: rgb(23, 61, 195);
+        color: white;
+        font-weight: 500;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    #sec2 {
-        margin: 0;
-        width: 100%;
-        height: 550px;
+    #sec2 #cards {
+        min-width: 100%;
+        height: 720px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: space-between;
     }
 }
 
+/* 
+------
+Section 1 : Intro Content
+--------
+*/
+
 #sec1 {
     width: 100%;
-    height: 250px;
+    height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0 0 60px;
+    padding-top: 100px;
 }
 #sec1 #container {
-    width: 70%;
-    max-height: 90%;
+    width: 90%;
+    max-width: 788px;
+    max-height: 100%;
     text-align: center;
     /* background-color: rgb(255, 255, 255); */
     margin: 0;
@@ -43,7 +87,8 @@ body {
 
 #sec1 #header{
     width: 100%;
-    margin: 10px 0 15px;
+    margin: 10px 0 20px;
+    font-size: 17px;
     font-weight: 600;
     color: rgb(48, 48, 48);
 }
@@ -51,44 +96,55 @@ body {
     width: 100%;
 }
 #sec1 #intro h1{
-    font-size: 1.5cm;
+    font-size: 72px;
     margin: 0 0 10px;
-    font-weight: 650;
+    font-weight: 600;
     color: rgb(23, 61, 195);
 }
 #sec1 #about {
-    width: 80%;
-    font-size: small;
-    font-weight: 500;
+    max-width: 95%;
+    font-size: 16px;
+    font-weight: 400;
     color: rgb(48, 48, 48);
+    line-height: 2;
 }
 
+/* 
+------
+Section 2 : Card Content
+--------
+*/
+
 #sec2 {
-    margin: 0;
+    margin: 0 0 40px;
     width: 100%;
-    height: 700px;
+    min-height: 680px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #sec2 #container {
-    width: 70%;
-    height: 90%;
+    width: 90%;
+    max-width: 1100px;
+    height: 680px;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* background-color: rgb(231, 133, 133); */
+    align-items: space-between;
 }
 #sec2 #main_card {
-    width: 45%;
-    height: auto;
+    max-width: 500px;
+    max-height: 640px;
     background-color: rgb(23, 61, 195);
     color: white;
     font-weight: 500;
-    margin: 10px 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#main_card:hover {
+    box-shadow: 0px 10px 12px 0 rgba(0, 0, 0, 0.2);
 }
 #sec2 #main_container {
     width: 90%;
@@ -106,55 +162,127 @@ body {
     height: 200px;
     background-color: white;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 #sec2 #intro_message {
-    font-size: xx-large;
+    font-size: 45px;
     text-align: center;
     margin: 0
 }
-#sec2 #button {
+#main_card button {
     margin: 0;
-    height: auto;
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+#main_card button:hover {
+    background-color: white;
+    border: none;
+    color: rgb(23, 61, 195);
+}
+#main_card a {
+    text-decoration: none;
+}
+#main_card a:visited {
+    text-decoration: none;
+    color: inherit;
 }
 #sec2 #cards {
-    width: 52%;
+    max-width: 51%;
     height: auto;
-    padding: 10px 0;
+    max-height: 640px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     align-content: space-between;
 }
-#sec2 #card {
-    width: 47%;
-    height: 48%;
+#card_1, #card_2, #card_3, #card_4 {
+    width: 40%;
+    max-width: 200px;
+    height: 35%;
+    max-height: 200px;
     background-color: white;
+    border-bottom: solid 15px;
+    padding: 90px 30px 0;
+}
+#card_1:hover, #card_2:hover, #card_3:hover, #card_4:hover {
+    box-shadow: 0px 6px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#card_1 {
+    border-color: rgb(223, 83, 83);
+}
+#card_2 {
+    border-color: rgb(85, 83, 223);
+}
+#card_3 {
+    border-color: rgb(83, 223, 169);
+}
+#card_4 {
+    border-color: rgb(223, 186, 83);
+}
+#card_icon {
+    width: 80px;
+    height: 70px;
+}
+#card_icon img{
+    width: auto;
+    height: 100%;
+}
+#card_4 #card_icon img{
+    width: 100%;
+    height: auto;
+}
+#card_title{
+    font-size: 26px;
+    font-weight: 500;
+    margin: 20px 0 15px;
+}
+#card_link {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-decoration: underline solid black 1.5px;
+    text-underline-offset: 5px;
+    color: black;
+}
+#card_link a:visited {
+    text-decoration: none;
+    color: black;
+}
+#card_1 #card_link a:hover {
+    color: rgb(223, 83, 83);
+}
+#card_2 #card_link a:hover {
+    color: rgb(85, 83, 223);
+}
+#card_3 #card_link a:hover {
+    color: rgb(83, 223, 169);
+}
+#card_4 #card_link a:hover {
+    color: rgb(223, 186, 83);
+}
+
+/* 
+------
+Section 3 : Footer
+--------
+*/
+
+#sec3{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(51, 51, 51);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#sec2 #main_box {
-    width: 80%;
-    height: 80%;
-}
-#card_icon {
-    width: 80%;
-    height: auto;
-}
-#card_icon img{
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: 50% 50%;
-}
-#card_title{
-    font-size: large;
-    font-weight: 500;
-    margin: 10px 0;
-}
-#card_link {
-    font-size: small;
-    font-weight: 500;
-    font-stretch: expanded;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: white;
 }
